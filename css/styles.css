@@ -54,6 +54,14 @@ body{
 .map-placeholder{height:180px;background:linear-gradient(90deg,#eef9f3,#ffffff);border:1px dashed #c7e8d4;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
 .site-footer{border-top:1px solid #e6e6e6;padding:1rem 0;background:transparent}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.footer-right{display:flex;align-items:center;gap:1rem}
+.footer-right nav a{margin-right:.75rem;text-decoration:none;color:var(--muted)}
+.social{display:flex;gap:.5rem;align-items:center}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:transparent;border:1px solid #e6e6e6;color:var(--muted);text-decoration:none}
+.social svg{width:18px;height:18px}
+.social-icon{width:18px;height:18px;display:block}
+.social a:hover{background:linear-gradient(90deg,#fff,#f6fffb);border-color:var(--accent);color:var(--accent)}
+.social a:focus{outline:3px solid rgba(11,91,61,0.15);outline-offset:3px}
 @media(max-width:880px){
   .about-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
