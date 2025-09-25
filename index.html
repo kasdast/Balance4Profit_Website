@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ky">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -15,11 +15,18 @@
   <img src="images/balance4profit.jpg" alt="Balance4Profit logo" class="logo">
         <span class="brand-text">Balance4Profit</span>
       </a>
-      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="header-right">
+        <div class="lang-switcher" role="tablist" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="ky" aria-pressed="true">KG</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
       <nav class="site-nav" id="site-nav">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -27,42 +34,42 @@
   <main>
     <section class="hero">
       <div class="container hero-inner">
-        <h1>Accounting & Tax Services for businesses in Kyrgyzstan</h1>
-        <p>Trusted bookkeeping, tax preparation, financial reporting and advisory services by Nazgul Kadyralieva and the Balance4Profit team.</p>
+  <h1 data-i18n="hero.title">Accounting & Tax Services for businesses in Kyrgyzstan</h1>
+  <p data-i18n="hero.lead">Trusted bookkeeping, tax preparation, financial reporting and advisory services by Nazgul Kadyralieva and the Balance4Profit team.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#contact">Get a Consultation</a>
-          <a class="btn ghost" href="#services">See Services</a>
+          <a class="btn primary" href="#contact" data-i18n="hero.cta1">Get a Consultation</a>
+          <a class="btn ghost" href="#services" data-i18n="hero.cta2">See Services</a>
         </div>
       </div>
     </section>
 
     <section id="services" class="section services">
       <div class="container">
-        <h2>Our Services</h2>
-        <p class="lead">A clear, simple set of services tailored for small and medium enterprises in Kyrgyzstan.</p>
+  <h2 data-i18n="services.title">Our Services</h2>
+  <p class="lead" data-i18n="services.lead">A clear, simple set of services tailored for small and medium enterprises in Kyrgyzstan.</p>
         <div class="grid">
           <div class="card">
-            <h3>Bookkeeping</h3>
-            <p>Monthly bookkeeping, reconciliations, and financial statements prepared to local standards.</p>
+            <h3 data-i18n="services.bookkeeping.title">Bookkeeping</h3>
+            <p data-i18n="services.bookkeeping.desc">Monthly bookkeeping, reconciliations, and financial statements prepared to local standards.</p>
           </div>
           <div class="card">
-            <h3>Tax Preparation</h3>
-            <p>Tax filings, VAT reporting, and tax optimization strategies for KIC and corporate taxpayers.</p>
+            <h3 data-i18n="services.tax.title">Tax Preparation</h3>
+            <p data-i18n="services.tax.desc">Tax filings, VAT reporting, and tax optimization strategies for KIC and corporate taxpayers.</p>
           </div>
           <div class="card">
-            <h3>Payroll</h3>
-            <p>Payroll processing, social contributions, payslips and labor-report assistance.</p>
+            <h3 data-i18n="services.payroll.title">Payroll</h3>
+            <p data-i18n="services.payroll.desc">Payroll processing, social contributions, payslips and labor-report assistance.</p>
           </div>
           <div class="card">
-            <h3>Advisory</h3>
-            <p>Financial planning, cashflow forecasts and business registration support.</p>
+            <h3 data-i18n="services.advisory.title">Advisory</h3>
+            <p data-i18n="services.advisory.desc">Financial planning, cashflow forecasts and business registration support.</p>
           </div>
         </div>
 
         <div class="accordion" id="service-accordion">
-          <button class="accordion-toggle">More about our process</button>
+          <button class="accordion-toggle" data-i18n="services.more.title">More about our process</button>
           <div class="accordion-panel">
-            <p>We start with an onboarding call, review your records, then propose a tailored plan (monthly/quarterly/annual). Pricing depends on transaction volume and scope.</p>
+            <p data-i18n="services.more.desc">We start with an onboarding call, review your records, then propose a tailored plan (monthly/quarterly/annual). Pricing depends on transaction volume and scope.</p>
           </div>
         </div>
 
@@ -71,20 +78,20 @@
 
     <section id="about" class="section about">
       <div class="container">
-        <h2>About Balance4Profit</h2>
+  <h2 data-i18n="about.title">About Balance4Profit</h2>
         <div class="about-grid">
           <div>
-            <p><strong>Owner:</strong> Nazgul Kadyralieva</p>
-            <p><strong>Location:</strong> Bishkek, Kyrgyzstan (serving nationwide)</p>
-            <p>Balance4Profit helps businesses get their finances in order so owners can focus on growth. We prioritize clarity, compliance and friendly customer service.</p>
-            <p><em>Languages:</em> Kyrgyz / Russian / English (adjust as needed)</p>
+            <p><strong data-i18n="about.owner.label">Owner:</strong> <span data-i18n="about.owner.name">Nazgul Kadyralieva</span></p>
+            <p><strong data-i18n="about.location.label">Location:</strong> <span data-i18n="about.location.value">Bishkek, Kyrgyzstan (serving nationwide)</span></p>
+            <p data-i18n="about.desc">Balance4Profit helps businesses get their finances in order so owners can focus on growth. We prioritize clarity, compliance and friendly customer service.</p>
+            <p><em data-i18n="about.languages.label">Languages:</em> <span data-i18n="about.languages.value">Kyrgyz / Russian / English (adjust as needed)</span></p>
           </div>
           <div>
-            <h3>Why choose us?</h3>
+            <h3 data-i18n="about.why.title">Why choose us?</h3>
             <ul>
-              <li>Local tax knowledge</li>
-              <li>Personalized service</li>
-              <li>Secure handling of financial data</li>
+              <li data-i18n="about.why.item1">Local tax knowledge</li>
+              <li data-i18n="about.why.item2">Personalized service</li>
+              <li data-i18n="about.why.item3">Secure handling of financial data</li>
             </ul>
           </div>
         </div>
@@ -93,43 +100,43 @@
 
     <section id="contact" class="section contact">
       <div class="container">
-        <h2>Contact</h2>
-        <p class="lead">Ready to talk? Send a message or schedule a consultation.</p>
+  <h2 data-i18n="contact.title">Contact</h2>
+  <p class="lead" data-i18n="contact.lead">Ready to talk? Send a message or schedule a consultation.</p>
 
         <div class="contact-grid">
           <form id="contact-form" class="contact-form">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" placeholder="Full name" required>
+            <label for="name" data-i18n-label="contact.form.name.label">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Full name" data-i18n-placeholder="contact.form.name.placeholder" required>
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <label for="email" data-i18n-label="contact.form.email.label">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" data-i18n-placeholder="contact.form.email.placeholder" required>
 
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" placeholder="+996 7XX XXX XXX">
+            <label for="phone" data-i18n-label="contact.form.phone.label">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+996 7XX XXX XXX" data-i18n-placeholder="contact.form.phone.placeholder">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your needs" required></textarea>
+            <label for="message" data-i18n-label="contact.form.message.label">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your needs" data-i18n-placeholder="contact.form.message.placeholder" required></textarea>
 
             <div class="form-actions">
-              <button type="submit" class="btn primary">Send Message</button>
-              <button type="button" id="call-btn" class="btn ghost">Request a Callback</button>
+              <button type="submit" class="btn primary" data-i18n="contact.form.submit">Send Message</button>
+              <button type="button" id="call-btn" class="btn ghost" data-i18n="contact.form.callback">Request a Callback</button>
             </div>
 
-            <p class="note">Or email: <a href="mailto:hello@balance4profit.example">hello@balance4profit.example</a> (replace with real email)</p>
+            <p class="note" data-i18n="contact.note">Or email: <a href="mailto:hello@balance4profit.example">hello@balance4profit.example</a> (replace with real email)</p>
           </form>
 
           <div class="contact-info">
-            <h3>Office</h3>
-            <p><strong>Address:</strong> <!-- fill address --> Bishkek, Kyrgyzstan</p>
-            <p><strong>Phone:</strong> <!-- fill phone --> +996 (fill)</p>
-            <p><strong>Email:</strong> hello@balance4profit.example</p>
+            <h3 data-i18n="contact.office.title">Office</h3>
+            <p><strong data-i18n="contact.office.address.label">Address:</strong> <span data-i18n="contact.office.address.value">Bishkek, Kyrgyzstan</span></p>
+            <p><strong data-i18n="contact.office.phone.label">Phone:</strong> <span data-i18n="contact.office.phone.value">+996 (fill)</span></p>
+            <p><strong data-i18n="contact.office.email.label">Email:</strong> <a href="mailto:hello@balance4profit.example">hello@balance4profit.example</a></p>
 
-            <h3>Find us</h3>
-            <p>Embed a Google Map or Yandex Map here. Example placeholder below.</p>
-            <div class="map-placeholder">Map placeholder — add iframe here</div>
+            <h3 data-i18n="contact.findus.title">Find us</h3>
+            <p data-i18n="contact.findus.desc">Embed a Google Map or Yandex Map here. Example placeholder below.</p>
+            <div class="map-placeholder" data-i18n="contact.map.placeholder">Map placeholder — add iframe here</div>
 
-            <h3>Hours</h3>
-            <p>Mon–Fri: 09:00 – 18:00</p>
+            <h3 data-i18n="contact.hours.title">Hours</h3>
+            <p data-i18n="contact.hours.value">Mon–Fri: 09:00 – 18:00</p>
           </div>
         </div>
 
@@ -138,10 +145,10 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> Balance4Profit — All rights reserved. Owner: Nazgul Kadyralieva</p>
+        <p data-i18n="footer.copyright">© <span id="year"></span> Balance4Profit — All rights reserved. Owner: Nazgul Kadyralieva</p>
         <nav>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+          <a href="#" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" data-i18n="footer.terms">Terms</a>
         </nav>
       </div>
     </footer>
