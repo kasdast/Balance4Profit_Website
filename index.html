@@ -127,13 +127,22 @@
 
           <div class="contact-info">
             <h3 data-i18n="contact.office.title">Office</h3>
-            <p><strong data-i18n="contact.office.address.label">Address:</strong> <span data-i18n="contact.office.address.value">Bishkek, Kyrgyzstan</span></p>
-            <p><strong data-i18n="contact.office.phone.label">Phone:</strong> <span data-i18n="contact.office.phone.value">+996 (fill)</span></p>
-            <p><strong data-i18n="contact.office.email.label">Email:</strong> <a href="mailto:hello@balance4profit.example">hello@balance4profit.example</a></p>
+            <p><strong data-i18n="contact.office.address.label">Address:</strong> <span data-i18n="contact.office.address.value">103 Toktonaliyev street, Oktyabr City district, Bishkek 720044, Kyrgyzstan</span></p>
+            <p><strong data-i18n="contact.office.phone.label">Phone:</strong> <span data-i18n="contact.office.phone.value">+996 776 955 726</span></p>
+            <p><strong data-i18n="contact.office.email.label">Email:</strong> <a href="mailto:hello@balance4profit.example">kadnazik95@gmail.com</a></p>
 
             <h3 data-i18n="contact.findus.title">Find us</h3>
-            <p data-i18n="contact.findus.desc">Embed a Google Map or Yandex Map here. Example placeholder below.</p>
-            <div class="map-placeholder" data-i18n="contact.map.placeholder">Map placeholder — add iframe here</div>
+            <p data-i18n="contact.findus.desc">Find our office on maps. Use the buttons below to open the location in your preferred map service.</p>
+            <div class="map-container" aria-label="Office location map">
+              <div class="map-iframe" style="width:100%;max-width:600px;height:350px;border:1px solid #ccc;">
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=74.5914799%2C42.8428787%2C74.5916403%2C42.8430215&layer=mapnik&marker=42.8429501%2C74.5915601" style="border:0;width:100%;height:100%;" loading="lazy" title="Balance4Profit office on OpenStreetMap"></iframe>
+              </div>
+              <p class="map-links" style="margin-top:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+                <a class="btn ghost" href="https://yandex.ru/maps/?ll=74.591560%2C42.842950&z=17&text=103%20Toktonaliyev%20Bishkek" target="_blank" rel="noopener noreferrer">Open in Yandex.Maps</a>
+                <a class="btn ghost" href="https://2gis.kg/?m=74.591560,42.842950,17" target="_blank" rel="noopener noreferrer">Open in 2GIS</a>
+                <a class="btn ghost" href="https://www.openstreetmap.org/?mlat=42.8429501&mlon=74.5915601#map=18/42.84295/74.59156" target="_blank" rel="noopener noreferrer">Open larger map</a>
+              </p>
+            </div>
 
             <h3 data-i18n="contact.hours.title">Hours</h3>
             <p data-i18n="contact.hours.value">Mon–Fri: 09:00 – 18:00</p>
