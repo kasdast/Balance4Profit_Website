@@ -70,3 +70,15 @@ body{
   .site-nav{display:none;position:absolute;right:1rem;top:64px;background:#fff;padding:.75rem;border-radius:8px;border:1px solid #eee;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
   .site-nav a{display:block;padding:.5rem 0}
 }
+
+/* form status styles (moved from inline in index.html) */
+#form-status{
+  margin-top:0.5rem;
+  padding:0.5rem;
+  border-radius:4px;
+  display:none;
+}
+#form-status.visible{display:block}
+#form-status.info{color:#0c5460;background:#d1ecf1}
+#form-status.success{color:#155724;background:#d4edda}
+#form-status.error{color:#721c24;background:#f8d7da}

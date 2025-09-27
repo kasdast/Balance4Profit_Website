@@ -19,7 +19,11 @@ Then open http://localhost:8000 in your browser.
 
 Placeholders / things to fill
 
-- Replace the contact email in `index.html` and `script.js` (hello@balance4profit.example).
+- Replace the contact email in `index.html` and `script.js` (kadnazik95@gmail.com).
+ - (Optional) Enable client-side form submissions with Formspree:
+	 1. Create a free form at https://formspree.io and copy the form endpoint (it looks like `https://formspree.io/f/abcd1234`).
+	 2. Open `script.js` and replace the `FORM_ENDPOINT` placeholder with your endpoint.
+	 3. The form will then send JSON POST requests to Formspree and show success/error messages in the page.
 - Fill real office address, phone number.
 - If you want form submissions handled server-side, integrate a backend endpoint or a service (Formspree, Netlify Forms, etc.).
 

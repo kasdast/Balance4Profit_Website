@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'contact.form.message.label': 'Хабар',
       'contact.form.message.placeholder': 'Сиздин муктаждык жөнүндө айтып бериңиз',
       'contact.form.submit': 'Хабар жиберүү',
-      'contact.form.callback': 'Чакыруу суранычы',
-      'contact.note': 'Же почта жөнөтүңүз: kadnazik95@gmail.com',
+    'contact.form.callback': 'Чакыруу суранычы',
+  'contact.note': 'Же почта жөнөтүңүз: kadnazik95@gmail.com',
       'contact.office.title': 'Офис',
       'contact.office.address.label': 'Дареги:',
       'contact.office.address.value': '720044, Кыргызстан, Бишкек шаары, Октябрь району, Токтоналиев көчөсү 103',
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'contact.form.message.placeholder': 'Расскажите о ваших потребностях',
       'contact.form.submit': 'Отправить',
       'contact.form.callback': 'Заказать звонок',
-      'contact.note': 'Или напишите на почту: kadnazik95@gmail.com',
+  'contact.note': 'Или напишите на почту: kadnazik95@gmail.com',
       'contact.office.title': 'Офис',
       'contact.office.address.label': 'Адрес:',
       'contact.office.address.value': 'ул. Токтоналиева, 103, Октябрьский городской округ, Бишкек 720044, Кыргызстан',
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'contact.form.message.placeholder': 'Tell us about your needs',
       'contact.form.submit': 'Send Message',
       'contact.form.callback': 'Request a Callback',
-      'contact.note': 'Or email: kadnazik95@gmail.com',
+  'contact.note': 'Or email: kadnazik95@gmail.com',
       'contact.office.title': 'Office',
       'contact.office.address.label': 'Address:',
       'contact.office.address.value': '103 Toktonaliyev street, Oktyabr City district, Bishkek 720044, Kyrgyzstan',
@@ -248,21 +248,63 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // contact form: open mailto with filled values (simple, client-side)
+  // contact form: submit to a client-side form service (Formspree) instead of mailto
+  // Configure FORM_ENDPOINT with your Formspree form id (e.g. 'https://formspree.io/f/xyzabc')
+  const FORM_ENDPOINT = 'https://formspree.io/f/xblzdzbk'; // <-- replace with your form id
+
   const form = document.getElementById('contact-form');
-  form && form.addEventListener('submit', function(e){
+  const statusEl = document.getElementById('form-status');
+
+  form && form.addEventListener('submit', async function(e){
     e.preventDefault();
-    const name = encodeURIComponent(document.getElementById('name').value.trim());
-    const email = encodeURIComponent(document.getElementById('email').value.trim());
-    const phone = encodeURIComponent(document.getElementById('phone').value.trim());
-    const message = encodeURIComponent(document.getElementById('message').value.trim());
 
-    const recipient = 'hello@balance4profit.example'; // replace with real email
-    const subject = encodeURIComponent('Website contact from ' + (name || 'website visitor'));
-    const body = encodeURIComponent(`Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\nPhone: ${decodeURIComponent(phone)}\n\nMessage:\n${decodeURIComponent(message)}`);
+    // collect values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-    // open mail client
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    // basic validation
+    if(!name || !email || !message){
+      if(statusEl){ statusEl.className = 'visible info'; statusEl.textContent = 'Please fill in name, email and message.'; }
+      return;
+    }
+
+    // disable submit while sending
+    const submitBtn = form.querySelector('button[type="submit"]');
+  if(submitBtn) submitBtn.disabled = true;
+  if(statusEl){ statusEl.className = 'visible info'; statusEl.textContent = 'Sending...'; }
+
+    try{
+      // send JSON to Formspree endpoint. Replace FORM_ENDPOINT above with your own.
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          _subject: `Website contact — Balance4Profit` // optional subject for Formspree
+        })
+      });
+
+      if(res.ok){
+        if(statusEl){ statusEl.className = 'visible success'; statusEl.textContent = 'Thanks! Your message was sent.'; }
+        form.reset();
+      } else {
+        const data = await res.json().catch(()=>null);
+        const errMsg = (data && data.error) ? data.error : 'Submission failed — please try again later.';
+        if(statusEl){ statusEl.className = 'visible error'; statusEl.textContent = errMsg; }
+      }
+    } catch(err){
+      if(statusEl){ statusEl.className = 'visible error'; statusEl.textContent = t('status.network', {email: 'kadnazik95@gmail.com'}); }
+    } finally{
+      if(submitBtn) submitBtn.disabled = false;
+    }
   });
 
   // request callback button placeholder
