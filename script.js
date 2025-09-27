@@ -50,6 +50,15 @@ document.addEventListener('DOMContentLoaded', function(){
       'contact.form.message.placeholder': 'Сиздин муктаждык жөнүндө айтып бериңиз',
       'contact.form.submit': 'Хабар жиберүү',
     'contact.form.callback': 'Чакыруу суранычы',
+  'contact.consent': 'Бул форманы жөнөтүү менен сиз биздин жооп берүү үчүн аты, электрондук почта жана билдирүүнү пайдаланууга макулсуз. Биздин <a href="privacy.html">Купуялык саясаты</a>-н караңыз.',
+  'privacy.title': 'Купуялык саясаты',
+  'privacy.lead': 'Бул бетте биз кантип сиздин жеке маалыматтарды чогултабыз, сактайбыз жана колдонобуз туралуу көзүңүзгө илебиз.' ,
+  'privacy.what.title': 'Биз эмне чогултабыз',
+  'privacy.what.desc': 'Биз контакт формасында берген маалыматтарды (аты, электрондук почта, телефон жана билдирүү) чогултабыз. Биз жеке маалыматтарды сатпайбыз.',
+  'privacy.how.title': 'Биз аны кантип колдонобуз',
+  'privacy.how.desc': 'Биз сиздин байланыш маалыматтарыңызды суроого жооп берүү, консультацияларды уюштуруу жана кызмат көрсөтүү үчүн колдонобуз. Маалымат коопсуз сакталат жана тек гана уруксат берген кызматкерлерге жеткиликтүү.',
+  'privacy.contact.title': 'Суроолор',
+  'privacy.contact.desc': 'Маалыматтарыңыз боюнча суроолоруңуз болсо же аларды өчүртүүнү кааласаңыз, kadnazik95@gmail.com дарегине кат жазыңыз.',
   'contact.note': 'Же почта жөнөтүңүз: kadnazik95@gmail.com',
       'contact.office.title': 'Офис',
       'contact.office.address.label': 'Дареги:',
@@ -109,6 +118,15 @@ document.addEventListener('DOMContentLoaded', function(){
       'contact.form.message.placeholder': 'Расскажите о ваших потребностях',
       'contact.form.submit': 'Отправить',
       'contact.form.callback': 'Заказать звонок',
+  'contact.consent': 'Отправляя эту форму, вы соглашаетесь, что мы можем использовать ваше имя, электронную почту и сообщение для ответа на ваш запрос. Ознакомьтесь с нашей <a href="privacy.html">Политикой конфиденциальности</a>.',
+  'privacy.title': 'Политика конфиденциальности',
+  'privacy.lead': 'Здесь описано, как мы собираем, храним и используем ваши персональные данные.',
+  'privacy.what.title': 'Что мы собираем',
+  'privacy.what.desc': 'Мы собираем информацию, которую вы предоставляете в контактной форме (имя, электронная почта, телефон и сообщение). Мы не продаем персональные данные.',
+  'privacy.how.title': 'Как мы используем данные',
+  'privacy.how.desc': 'Мы используем ваши контактные данные для ответов на запросы, организации консультаций и оказания услуг. Данные хранятся безопасно и доступны только уполномоченному персоналу.',
+  'privacy.contact.title': 'Вопросы',
+  'privacy.contact.desc': 'Если у вас есть вопросы о ваших данных или вы хотите удалить их, напишите на kadnazik95@gmail.com.',
   'contact.note': 'Или напишите на почту: kadnazik95@gmail.com',
       'contact.office.title': 'Офис',
       'contact.office.address.label': 'Адрес:',
@@ -169,6 +187,15 @@ document.addEventListener('DOMContentLoaded', function(){
       'contact.form.message.placeholder': 'Tell us about your needs',
       'contact.form.submit': 'Send Message',
       'contact.form.callback': 'Request a Callback',
+  'contact.consent': 'By submitting this form you agree that we may use your name, email and message to respond to your inquiry. Read our <a href="privacy.html">Privacy Policy</a>.',
+  'privacy.title': 'Privacy Policy',
+  'privacy.lead': 'This page explains how we collect, store and use your personal information.',
+  'privacy.what.title': 'What we collect',
+  'privacy.what.desc': 'We collect the information you provide in the contact form (name, email, phone and message). We do not sell personal data.',
+  'privacy.how.title': 'How we use it',
+  'privacy.how.desc': 'We use your contact details to respond to inquiries, schedule consultations and provide our services. Data is stored securely and only accessible to authorized staff.',
+  'privacy.contact.title': 'Questions',
+  'privacy.contact.desc': 'If you have questions about your data or want it removed, email kadnazik95@gmail.com.',
   'contact.note': 'Or email: kadnazik95@gmail.com',
       'contact.office.title': 'Office',
       'contact.office.address.label': 'Address:',
@@ -248,9 +275,9 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // contact form: submit to a client-side form service (Formspree) instead of mailto
-  // Configure FORM_ENDPOINT with your Formspree form id (e.g. 'https://formspree.io/f/xyzabc')
-  const FORM_ENDPOINT = 'https://formspree.io/f/xblzdzbk'; // <-- replace with your form id
+  
+  // Configure FORM_ENDPOINT with Formspree form id
+  const FORM_ENDPOINT = 'https://formspree.io/f/xblzdzbk'; 
 
   const form = document.getElementById('contact-form');
   const statusEl = document.getElementById('form-status');
@@ -276,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function(){
   if(statusEl){ statusEl.className = 'visible info'; statusEl.textContent = 'Sending...'; }
 
     try{
-      // send JSON to Formspree endpoint. Replace FORM_ENDPOINT above with your own.
+      // send JSON to Formspree endpoint.
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: {

@@ -51,6 +51,9 @@ body{
 .contact-form input,.contact-form textarea{width:100%;padding:.6rem;margin-top:.25rem;border-radius:8px;border:1px solid #e6e6e6}
 .form-actions{display:flex;gap:.5rem;margin-top:.75rem}
 .contact-info{background:transparent;padding:0}
+/* consent text near contact form */
+.contact-form .consent{font-size:0.85rem;color:var(--muted);margin-top:.75rem}
+.contact-form .consent a{color:var(--accent);text-decoration:underline}
 .map-placeholder{height:180px;background:linear-gradient(90deg,#eef9f3,#ffffff);border:1px dashed #c7e8d4;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
 .site-footer{border-top:1px solid #e6e6e6;padding:1rem 0;background:transparent}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
