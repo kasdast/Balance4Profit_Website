@@ -58,13 +58,13 @@ document.addEventListener('DOMContentLoaded', function(){
   'privacy.how.title': 'Биз аны кантип колдонобуз',
   'privacy.how.desc': 'Биз сиздин байланыш маалыматтарыңызды суроого жооп берүү, консультацияларды уюштуруу жана кызмат көрсөтүү үчүн колдонобуз. Маалымат коопсуз сакталат жана тек гана уруксат берген кызматкерлерге жеткиликтүү.',
   'privacy.contact.title': 'Суроолор',
-  'privacy.contact.desc': 'Маалыматтарыңыз боюнча суроолоруңуз болсо же аларды өчүртүүнү кааласаңыз, kadnazik95@gmail.com дарегине кат жазыңыз.',
-  'contact.note': 'Же почта жөнөтүңүз: kadnazik95@gmail.com',
+  'privacy.contact.desc': 'Маалыматтарыңыз боюнча суроолоруңуз болсо же аларды өчүртүүнү кааласаңыз, balance4profit@gmail.com дарегине кат жазыңыз.',
+  'contact.note': 'Же почта жөнөтүңүз: balance4profit@gmail.com',
       'contact.office.title': 'Офис',
       'contact.office.address.label': 'Дареги:',
       'contact.office.address.value': '720044, Кыргызстан, Бишкек шаары, Октябрь району, Токтоналиев көчөсү 103',
       'contact.office.phone.label': 'Телефон:',
-      'contact.office.phone.value': '+996 776 955 726',
+      'contact.office.phone.value': '+996 559 991 185',
       'contact.office.email.label': 'Электрондук почта:',
       'contact.findus.title': 'Бизди табыңыз',
       'contact.findus.desc': 'Биздин кеңсебизди карталардан табыңыз. Сиз каалаган карта кызматында жайгашкан жерди ачуу үчүн төмөнкү баскычтарды колдонуңуз.',
@@ -126,13 +126,13 @@ document.addEventListener('DOMContentLoaded', function(){
   'privacy.how.title': 'Как мы используем данные',
   'privacy.how.desc': 'Мы используем ваши контактные данные для ответов на запросы, организации консультаций и оказания услуг. Данные хранятся безопасно и доступны только уполномоченному персоналу.',
   'privacy.contact.title': 'Вопросы',
-  'privacy.contact.desc': 'Если у вас есть вопросы о ваших данных или вы хотите удалить их, напишите на kadnazik95@gmail.com.',
-  'contact.note': 'Или напишите на почту: kadnazik95@gmail.com',
+  'privacy.contact.desc': 'Если у вас есть вопросы о ваших данных или вы хотите удалить их, напишите на balance4profit@gmail.com.',
+  'contact.note': 'Или напишите на почту: balance4profit@gmail.com',
       'contact.office.title': 'Офис',
       'contact.office.address.label': 'Адрес:',
       'contact.office.address.value': 'ул. Токтоналиева, 103, Октябрьский городской округ, Бишкек 720044, Кыргызстан',
       'contact.office.phone.label': 'Телефон:',
-      'contact.office.phone.value': '+996 776 955 726',
+      'contact.office.phone.value': '+996 559 991 185',
       'contact.office.email.label': 'Электронная почта:',
       'contact.findus.title': 'Где нас найти',
       'contact.findus.desc': 'Найдите наш офис на картах. Используйте кнопки ниже, чтобы открыть местоположение в предпочитаемом вами картографическом сервисе.',
@@ -195,13 +195,13 @@ document.addEventListener('DOMContentLoaded', function(){
   'privacy.how.title': 'How we use it',
   'privacy.how.desc': 'We use your contact details to respond to inquiries, schedule consultations and provide our services. Data is stored securely and only accessible to authorized staff.',
   'privacy.contact.title': 'Questions',
-  'privacy.contact.desc': 'If you have questions about your data or want it removed, email kadnazik95@gmail.com.',
-  'contact.note': 'Or email: kadnazik95@gmail.com',
+  'privacy.contact.desc': 'If you have questions about your data or want it removed, email balance4profit@gmail.com.',
+  'contact.note': 'Or email: balance4profit@gmail.com',
       'contact.office.title': 'Office',
       'contact.office.address.label': 'Address:',
       'contact.office.address.value': '103 Toktonaliyev street, Oktyabr City district, Bishkek 720044, Kyrgyzstan',
       'contact.office.phone.label': 'Phone:',
-      'contact.office.phone.value': '+996 776 955 726',
+      'contact.office.phone.value': '+996 559 991 185',
       'contact.office.email.label': 'Email:',
       'contact.findus.title': 'Find us',
       'contact.findus.desc': 'Find our office on maps. Use the buttons below to open the location in your preferred map service.',
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function(){
         if(statusEl){ statusEl.className = 'visible error'; statusEl.textContent = errMsg; }
       }
     } catch(err){
-      if(statusEl){ statusEl.className = 'visible error'; statusEl.textContent = t('status.network', {email: 'kadnazik95@gmail.com'}); }
+      if(statusEl){ statusEl.className = 'visible error'; statusEl.textContent = t('status.network', {email: 'balance4profit@gmail.com'}); }
     } finally{
       if(submitBtn) submitBtn.disabled = false;
     }
