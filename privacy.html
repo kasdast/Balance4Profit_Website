@@ -1,51 +1,192 @@
-<!doctype html>
-<html lang="ky">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="privacy.title">Privacy Policy</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="images/balance4profit.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Balance4Profit</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/balance4profit.jpg">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"> 
-        <img src="images/balance4profit.jpg" alt="Balance4Profit logo" class="logo">
-        <span class="brand-text">Balance4Profit</span>
-      </a>
-      <div class="header-right">
-        <div class="lang-switcher" role="tablist" aria-label="Language switcher">
-          <button class="lang-btn" data-lang="ky" aria-pressed="true">KG</button>
-          <button class="lang-btn" data-lang="ru">RU</button>
-          <button class="lang-btn" data-lang="en">EN</button>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Company Logo/Name -->
+                <div class="nav-logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                        <img src="images/balance4profit.jpg" alt="Balance4Profit Logo" class="logo-image">
+                        <h2>Balance4Profit</h2>
+                    </a>
+                </div>
+                
+                <!-- Navigation Right Side -->
+                <div class="nav-right">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-button" id="langButton" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span class="current-lang">EN</span>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <ul class="lang-dropdown" id="langDropdown" role="menu" aria-labelledby="langButton">
+                            <li role="none"><a href="#" class="lang-option" data-lang="en" role="menuitem">English</a></li>
+                            <li role="none"><a href="#" class="lang-option" data-lang="ru" role="menuitem">Русский</a></li>
+                            <li role="none"><a href="#" class="lang-option" data-lang="ky" role="menuitem">Кыргызча</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 100px; padding-bottom: 60px;">
+        <div class="container">
+            <h1 class="privacy-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Privacy Policy</h1>
+            <p class="privacy-lead" style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem;">This page explains how we collect, store and use your personal information.</p>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h2 class="privacy-what-title" style="font-size: 1.5rem; margin-bottom: 1rem;">What we collect</h2>
+                <p class="privacy-what-desc" style="margin-bottom: 2rem; line-height: 1.7;">We collect the information you provide in the contact form (name, email, phone and message). We do not sell personal data.</p>
+
+                <h2 class="privacy-how-title" style="font-size: 1.5rem; margin-bottom: 1rem;">How we use it</h2>
+                <p class="privacy-how-desc" style="margin-bottom: 2rem; line-height: 1.7;">We use your contact details to respond to inquiries, schedule consultations and provide our services. Data is stored securely and only accessible to authorized staff.</p>
+
+                <h2 class="privacy-contact-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Questions</h2>
+                <p class="privacy-contact-desc" style="line-height: 1.7;">If you have questions about your data or want it removed, email <a href="mailto:balance4profit@gmail.com" style="color: #2563eb; text-decoration: underline;">balance4profit@gmail.com</a>.</p>
+            </div>
+
+            <p style="margin-top: 2rem;"><a href="index.html" style="color: #2563eb; text-decoration: none; font-weight: 500;">← <span class="back-link">Back</span></a></p>
         </div>
-      </div>
-    </div>
-  </header>
+    </main>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <h1 data-i18n="privacy.title">Privacy Policy</h1>
-        <p class="lead" data-i18n="privacy.lead">This page explains how we collect, store and use your personal information.</p>
+    <script src="script.js"></script>
+    <script>
+        // Privacy page specific translations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure script.js doesn't interfere - wait a bit for it to load
+            setTimeout(function() {
+                const privacyTranslations = {
+                en: {
+                    title: 'Privacy Policy',
+                    lead: 'This page explains how we collect, store and use your personal information.',
+                    whatTitle: 'What we collect',
+                    whatDesc: 'We collect the information you provide in the contact form (name, email, phone and message). We do not sell personal data.',
+                    howTitle: 'How we use it',
+                    howDesc: 'We use your contact details to respond to inquiries, schedule consultations and provide our services. Data is stored securely and only accessible to authorized staff.',
+                    contactTitle: 'Questions',
+                    contactDesc: 'If you have questions about your data or want it removed, email',
+                    back: 'Back'
+                },
+                ru: {
+                    title: 'Политика конфиденциальности',
+                    lead: 'На этой странице объясняется, как мы собираем, храним и используем вашу личную информацию.',
+                    whatTitle: 'Что мы собираем',
+                    whatDesc: 'Мы собираем информацию, которую вы предоставляете в контактной форме (имя, электронную почту, телефон и сообщение). Мы не продаем личные данные.',
+                    howTitle: 'Как мы используем это',
+                    howDesc: 'Мы используем ваши контактные данные для ответа на запросы, планирования консультаций и предоставления наших услуг. Данные хранятся в безопасности и доступны только уполномоченному персоналу.',
+                    contactTitle: 'Вопросы',
+                    contactDesc: 'Если у вас есть вопросы о ваших данных или вы хотите их удалить, напишите на',
+                    back: 'Назад'
+                },
+                ky: {
+                    title: 'Купуялык саясаты',
+                    lead: 'Бул бетте биз жеке маалыматтарыңызды кантип чогултуп, сактап жана колдонорубузду түшүндүрөт.',
+                    whatTitle: 'Биз эмнени чогултабыз',
+                    whatDesc: 'Биз байланыш формасында берген маалыматтарыңызды (аты, электрондук почта, телефон жана билдирүү) чогултабыз. Биз жеке маалыматтарды сатпайбыз.',
+                    howTitle: 'Аны кантип колдонобуз',
+                    howDesc: 'Биз байланыш маалыматтарыңызды суроолорго жооп берүү, консультацияларды пландаштыруу жана кызматтарыбызды көрсөтүү үчүн колдонобуз. Маалыматтар коопсуз сакталат жана аларга уруксат алган кызматкерлер гана кире алат.',
+                    contactTitle: 'Суроолор',
+                    contactDesc: 'Эгер маалыматтарыңыз жөнүндө суроолоруңуз болсо же аларды өчүргүңүз келсе, электрондук почтага жазыңыз',
+                    back: 'Артка'
+                }
+            };
 
-        <article class="card" style="margin-top:1rem;">
-          <h2 data-i18n="privacy.what.title">What we collect</h2>
-          <p data-i18n="privacy.what.desc">We collect the information you provide in the contact form (name, email, phone and message). We do not sell personal data.</p>
+            function updatePrivacyLanguage(lang) {
+                const t = privacyTranslations[lang];
+                if (!t) return;
 
-          <h2 data-i18n="privacy.how.title">How we use it</h2>
-          <p data-i18n="privacy.how.desc">We use your contact details to respond to inquiries, schedule consultations and provide our services. Data is stored securely and only accessible to authorized staff.</p>
+                // Update current language display
+                const currentLangSpan = document.querySelector('.current-lang');
+                if (currentLangSpan) {
+                    currentLangSpan.textContent = lang === 'en' ? 'EN' : lang === 'ru' ? 'RU' : 'KY';
+                }
 
-          <h2 data-i18n="privacy.contact.title">Questions</h2>
-          <p data-i18n="privacy.contact.desc">If you have questions about your data or want it removed, email <a href="mailto:balance4profit@gmail.com">balance4profit@gmail.com</a>.</p>
-        </article>
+                document.querySelector('.privacy-title').textContent = t.title;
+                document.querySelector('.privacy-lead').textContent = t.lead;
+                document.querySelector('.privacy-what-title').textContent = t.whatTitle;
+                document.querySelector('.privacy-what-desc').textContent = t.whatDesc;
+                document.querySelector('.privacy-how-title').textContent = t.howTitle;
+                document.querySelector('.privacy-how-desc').textContent = t.howDesc;
+                document.querySelector('.privacy-contact-title').textContent = t.contactTitle;
+                
+                const contactDesc = document.querySelector('.privacy-contact-desc');
+                contactDesc.innerHTML = `${t.contactDesc} <a href="mailto:balance4profit@gmail.com" style="color: #2563eb; text-decoration: underline;">balance4profit@gmail.com</a>.`;
+                
+                document.querySelector('.back-link').textContent = t.back;
+                document.title = `${t.title} - Balance4Profit`;
+                document.documentElement.setAttribute('lang', lang === 'ky' ? 'ky' : lang === 'ru' ? 'ru' : 'en');
+            }
 
-        <p style="margin-top:1rem;"><a href="index.html">← Back</a></p>
-      </div>
-    </section>
-  </main>
+            // Initialize with saved language
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            updatePrivacyLanguage(savedLang);
 
-  <script src="script.js"></script>
+            // Listen for language changes
+            const langOptions = document.querySelectorAll('.lang-option');
+            langOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const selectedLang = this.getAttribute('data-lang');
+                    updatePrivacyLanguage(selectedLang);
+                    localStorage.setItem('preferredLanguage', selectedLang);
+                    
+                    // Close the dropdown after selection
+                    const languageSwitcher = document.querySelector('.language-switcher');
+                    if (languageSwitcher) {
+                        languageSwitcher.classList.remove('active');
+                    }
+                });
+            });
+
+            // Language switcher toggle - Re-attach handlers to override script.js
+            const langButton = document.getElementById('langButton');
+            const languageSwitcher = document.querySelector('.language-switcher');
+            
+            if (langButton && languageSwitcher) {
+                // Remove any existing listeners by cloning and replacing
+                const newLangButton = langButton.cloneNode(true);
+                langButton.parentNode.replaceChild(newLangButton, langButton);
+                
+                newLangButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Language button clicked!'); // Debug log
+                    languageSwitcher.classList.toggle('active');
+                    
+                    // Update aria-expanded
+                    const isExpanded = languageSwitcher.classList.contains('active');
+                    newLangButton.setAttribute('aria-expanded', isExpanded);
+                    console.log('Dropdown is now:', isExpanded ? 'open' : 'closed'); // Debug log
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!languageSwitcher.contains(event.target)) {
+                        languageSwitcher.classList.remove('active');
+                        newLangButton.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+            }, 100); // Wait 100ms for script.js to initialize
+        });
+    </script>
 </body>
 </html>
