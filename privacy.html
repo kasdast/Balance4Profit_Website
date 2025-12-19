@@ -38,7 +38,6 @@
                         <ul class="lang-dropdown" id="langDropdown" role="menu" aria-labelledby="langButton">
                             <li role="none"><a href="#" class="lang-option" data-lang="en" role="menuitem">English</a></li>
                             <li role="none"><a href="#" class="lang-option" data-lang="ru" role="menuitem">Русский</a></li>
-                            <li role="none"><a href="#" class="lang-option" data-lang="ky" role="menuitem">Кыргызча</a></li>
                         </ul>
                     </div>
                 </div>
@@ -94,17 +93,6 @@
                     contactTitle: 'Вопросы',
                     contactDesc: 'Если у вас есть вопросы о ваших данных или вы хотите их удалить, напишите на',
                     back: 'Назад'
-                },
-                ky: {
-                    title: 'Купуялык саясаты',
-                    lead: 'Бул бетте биз жеке маалыматтарыңызды кантип чогултуп, сактап жана колдонорубузду түшүндүрөт.',
-                    whatTitle: 'Биз эмнени чогултабыз',
-                    whatDesc: 'Биз байланыш формасында берген маалыматтарыңызды (аты, электрондук почта, телефон жана билдирүү) чогултабыз. Биз жеке маалыматтарды сатпайбыз.',
-                    howTitle: 'Аны кантип колдонобуз',
-                    howDesc: 'Биз байланыш маалыматтарыңызды суроолорго жооп берүү, консультацияларды пландаштыруу жана кызматтарыбызды көрсөтүү үчүн колдонобуз. Маалыматтар коопсуз сакталат жана аларга уруксат алган кызматкерлер гана кире алат.',
-                    contactTitle: 'Суроолор',
-                    contactDesc: 'Эгер маалыматтарыңыз жөнүндө суроолоруңуз болсо же аларды өчүргүңүз келсе, электрондук почтага жазыңыз',
-                    back: 'Артка'
                 }
             };
 
@@ -115,7 +103,7 @@
                 // Update current language display
                 const currentLangSpan = document.querySelector('.current-lang');
                 if (currentLangSpan) {
-                    currentLangSpan.textContent = lang === 'en' ? 'EN' : lang === 'ru' ? 'RU' : 'KY';
+                    currentLangSpan.textContent = lang === 'en' ? 'EN' : 'RU';
                 }
 
                 document.querySelector('.privacy-title').textContent = t.title;
@@ -131,7 +119,7 @@
                 
                 document.querySelector('.back-link').textContent = t.back;
                 document.title = `${t.title} - Balance4Profit`;
-                document.documentElement.setAttribute('lang', lang === 'ky' ? 'ky' : lang === 'ru' ? 'ru' : 'en');
+                document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'en');
             }
 
             // Initialize with saved language
